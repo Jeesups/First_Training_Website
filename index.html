@@ -3,16 +3,84 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="To jest nasz pierwszy projekt">
-    <link rel="stylesheet" href="styles/background.css">
-    <title>My first site</title>
+    <link rel="stylesheet" href="styles/background.css"> <!--Good boi, that's how you link all external objects, mostyl stylesheets and script files-->
+    
+    <title>My first site</title> 
+    <script src="scripts/script.js"></script>
+    <!--Better than inline CSS, worse than standard, good idea to know that, but just make external file, it doesn't make your code so complicated -->  
+    <!-- Commenting this bastard out of my code
+      <style> 
+      h1#main-title{
+        color:green;
+      }
+      h2{
+        color:yellow;
+      }
+    </style> -->
+
+    <!--You can make script inside html, but honestly, it looks better if scripts are OUTSIDE file just like stylesheets unless you don't want to
+    waste time on making just one script (like clock) and that's it, otherwise I don't see reason to have one here-->
+   
   </head>
 
   <body>
-    <h1>HTML</h1>
-    <h2>Informacje o HTML</h2>
-    <p class="main-text">HTML pozwala &lt;opisać strukturę &nbsp;&nbsp;&nbsp; informacji zawartych wewnątrz strony internetowej, nadając odpowiednie znaczenie semantyczne poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze danych.</p>
-    <br>
-    <p>&copy; &trade; &amp;HTML umożliwia określenie wyglądu dokumentu w przeglądarce internetowej. Do szczegółowego opisu formatowania akapitów, nagłówków, użytych czcionek i kolorów, zalecane jest wykorzystywanie kaskadowych arkuszy stylów. </p>    
-    <img src="images/css3-html5-logo.png" alt="logo Html5" width="200" title="Jest to logo HTML5">
+    <!-- div tags were used before HTML5 standard was released, it is good to know those but nowadays there are better options-->
+    <header>
+        <h1 id="main-title">HTML</h1> <!-- #id -->
+        <h2 class="sub-title">Informacje o HTML</h2> <!-- .class -->
+        <h2 class="sub-title">Informacje o HTML</h2> 
+        <h2 class="sub-title">Informacje o HTML</h2>
+    </header>
+    <section> <!-- Main section of site-->
+      <nav>
+        <p id="navigation">Nawigacja menu</p>
+        <a href="about_me.html" target="_blank">O mnie</a> <!-- This is test, so it targets new tab, it should target _self which is default-->
+      </nav>   
+      <aside > <!-- style="color:red;" STOP, YOU ARE VIOLATING THE LAW! NEVER use inline CSS since it is hard to follow, make styles on external .css file instead-->
+        <p>Sidebar</p>
+      </aside>
+
+      <article>
+        <p class="main-text">HTML pozwala &lt;opisać strukturę &nbsp;&nbsp;&nbsp; informacji zawartych wewnątrz strony internetowej, nadając odpowiednie znaczenie semantyczne poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze danych.</p>
+        <br>
+        <a href="https://www.google.com" target="_blank">FACEBOOK</a> <!-- Important to add protocol before link since it will try to find file inside site folder| target = _self changes site on tab, _blank creates new tab-->
+        <p>HTML umożliwia określenie wyglądu dokumentu w przeglądarce internetowej. Do szczegółowego opisu formatowania akapitów, nagłówków, użytych czcionek i kolorów, zalecane jest wykorzystywanie kaskadowych arkuszy stylów. </p>    
+        <img src="images/css3-html5-logo.png" alt="logo Html5" width="200" title="Jest to logo HTML5">
+        <!-- Lists -->
+        <!-- Ordered List -->
+        <ol>
+          <li>Bananas</li>
+          <li>Apples</li>
+          <li>Oranges</li>
+        </ol>
+        <!-- Unordered List-->
+        <ul>
+          <li>Car</li>
+          <li>Motorcycle</li>
+          <li>Computer</li>
+        </ul>
+        
+        <dl>  <!-- Rare usage, it is Dictionary List--> <!-- Although I might use it to make HTML/CSS Cheat Sheet (Cause my memory overall sucks sometimes)-->
+          <dt>  <!-- Dictionary Term, on programming languages you can say it is Key-->
+            Books
+          </dt>
+          <dd>  <!--Dictionary Description, On programming languages it is value inside dictionary-->
+            Something you can read.
+          </dd>
+          <dt>Films</dt>
+          <dd>
+            Something you can watch.
+          </dd>
+        </dl>
+      </article>
+      <footer>
+        <p>&copy; &trade; &amp; Nasza firma itd.</p>
+      </footer>
+    </section>
   </body>
+  <script>
+    document.getElementById("main-title").innerHTML = "My title from JS"; //wont work, since html code is used from top to bottom, so it tries to change something which doesnt exist yet.
+    //Unless you put it under body so it work since rest of HTML tags are loaded so it can hook into existing object.
+  </script>
+
 </html>
