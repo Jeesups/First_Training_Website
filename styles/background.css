@@ -1,6 +1,13 @@
 p#title{
-  font-family: Arial;
-  font-weight: bold;
+  font-family: 'Sansita Swashed', cursive;
+  font-weight: normal;
   font-style: normal;
   font-size:30px;
+  color: rgb(0,0,0);
+}
+p{
+  color: rgba(255, 38, 0, 0.5)
+}
+body{
+  background-color: #50505052;
 }
