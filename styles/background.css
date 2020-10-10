@@ -4,7 +4,8 @@ p#title{
   font-weight: normal;
   font-style: normal;
   font-size:2em;
-  color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  text-shadow: 2px 2px 3px black; /* Works the same as box-shadow*/
 }
 
 body{
@@ -39,6 +40,8 @@ div.main-text{
   background-image: linear-gradient(gray,rgb(54, 54, 54));
   color: white;
   overflow: auto;
+  border-radius: 50px 30px 0px 20px; /* Adding additional values does different things with corners*/
+  border-radius: 50%; 
 }
 div.main-text:hover{
   background-color:red;
@@ -60,4 +63,18 @@ a:hover{
 }
 a:visited{
   color:green;
+}
+#test2{
+  background-color: grey;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  padding: 10px;
+  color: white;
+  box-shadow: 2px 2px 5px #000000; /* box-shadow: {how much its moved right} {how much its moved from bottom} {how big distortion is} {what color it is}*/
+  box-shadow: 10px 10px 0px red, -10px -10px 0px yellow; /* we can add more of them after comma*/
+  /*Border radius, making cuts in boxes*/
+  border-radius: 10px;
+  /*Float*/
+  
 }
