@@ -76,5 +76,39 @@ a:visited{
   /*Border radius, making cuts in boxes*/
   border-radius: 10px;
   /*Float*/
+  float:left; 
+  clear: both;
   
+  
+}
+img{
+  float:left;
+}
+#our-header{
+  display:flex;
+  /*flex-direction: row-reverse;*/
+  flex-wrap: nowrap; /*default is no-wrap, and it will resize elements if screen is resized, wrap will push object down withouth resizing*/
+  /*
+  justify-content: center;
+  justify-content: left;
+  justify-content: right;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  */
+  height: 300px;
+  border:1px solid red;
+  align-items: center;
+  align-items: stretch;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+
+}
+.numer{
+/*Flex box lepsza opcja od float*/
+
+  background-color: royalblue;
+  border:1px solid black;
+  flex-grow: 1;
 }
