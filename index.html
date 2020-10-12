@@ -37,23 +37,33 @@
   <body>
     <!-- div tags were used before HTML5 standard was released, it is good to know those but nowadays there are better options-->
     <header id="our-header">
-        <div class="numer">1</div>
-        <div class="numer">2</div>
+        <div class="numer alternatywa" style="grid-column: 1/5;">1</div>
+        <div class="numer alternatywa" style="grid-row: 2/4;">2</div>
         <div class="numer">3</div>
         <div class="numer">4</div>
+        <div class="numer">5</div>
+        <div class="numer alternatywa">6</div>
+        <div class="numer">7</div>
+        <div class="numer">8</div>
     </header>
+
     <div>&nbsp;</div>
-    <section> <!-- Main section of site-->
+    <section id="main-section"> <!-- Main section of site-->
       <nav>
         <p id="navigation"> <i class ="fas fa-camera"></i><i class ="fas fa-camera"></i>Nawigacja menu</p>
         <a href="about_me.html" target="_blank">O mnie</a> <!-- This is test, so it targets new tab, it should target _self which is default-->
         <a href="about_me1.html" target="_blank">O mnie</a> <!-- This is test, so it targets new tab, it should target _self which is default-->
         <a href="about_me2.html" target="_blank">O mnie</a> <!-- This is test, so it targets new tab, it should target _self which is default-->
       </nav>
+      <a href="about_me2.html" target="_blank">Poza</a>
       <aside > <!-- style="color:red;" STOP, YOU ARE VIOLATING THE LAW! NEVER use inline CSS since it is hard to follow, make styles on external .css file instead-->
         <p>Sidebar</p>
+        <div id="test5">TEST transition</div>
         <div id="test2">
-
+          Z cieniem
+        </div>
+        <div id="test3">
+          Z cieniem 2
         </div>
       </aside>
 
