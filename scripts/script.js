@@ -70,3 +70,92 @@ console.log(animal.length);
 console.log(animal.join('+'))
 */
 /** Objects */
+/** 
+let person = {
+    name: 'John', 
+    lastname: 'Smith', 
+    age: 24, 
+    schools: {
+        primary: '25',
+        highschool: '65'
+}
+};
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+console.log(person['lastname']);
+person.lastname = 'Connor';
+console.log(person['lastname']);
+
+person['age'] = 30;
+console.log(person['age']);
+
+
+console.log(person.schools);
+console.log(person.schools.primary);
+*/
+/** Loops */
+/** 
+for(let i = 0; i < 10; i++)
+{
+    console.log('Hello '+ String(i+1));
+}
+let something = true;
+while(something == true){
+    for(let i = 0; i < 10; i ++){
+        if(i == 7){
+            console.log("Inside loops!");
+            something = false;
+        }
+    }
+}
+
+let person = {
+    name: 'John', 
+    lastname: 'Smith', 
+    age: 24}
+
+for( x in person){
+    //console.log(person[x]);
+   // console.log(x);
+    console.log(x + ': '+ person[x]);
+}
+*/
+
+/** Functions */
+/** 
+function CalculateValue(a,b){
+    return a + b;
+}
+
+let calc = function(x,y){
+    return x*y;
+}
+//IMPORTANT: since js works just like html and css it goes from top to bottom, so addressing functions which will be defined lower will result in a error.
+console.log(CalculateValue(4,1));
+console.log(calc(5,5));
+
+// you can call function within variable by pushing body of anonymous function into first () and after it adding additional () for arguments, that way only value is stored in variable not entire function.
+let cal = 
+(function(x,y){
+    return x/y;
+})(2,5);
+console.log(cal);
+*/
+
+/** Loops on the arrays */
+
+let people = [ 
+    {name:'John', lastname:'Smith', age:25},
+    {name:'Mike', lastname:'Carpenter', age:35},
+    {name:'John', lastname:'Molases', age:63},
+]
+
+/** 
+for( let i = 0; i < people.length; i++){
+    //console.log(people[i]);
+}
+*/
+people.forEach(function(person){
+    console.log(person.name);
+});
